@@ -12,6 +12,9 @@ export const initKafka = async () => {
 };
 
 export const sendMessage = async (topic, key, value) => {
+
+    await initKafka();
+
     await producer.send({
         topic,
         messages: [{key, value}],
