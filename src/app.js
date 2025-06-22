@@ -3,7 +3,6 @@ import bodyParser from 'body-parser';
 import {sendMessage} from './producer.js';
 
 const app = express();
-
 app.use(bodyParser.json());
 
 app.get('/', async (req, res) => {

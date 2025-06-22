@@ -1,4 +1,5 @@
 import {Kafka} from 'kafkajs';
+import {sendMail} from "./resend.js";
 
 const kafka = new Kafka({
     clientId: 'test-consumer',
@@ -13,6 +14,8 @@ const run = async () => {
 
     await consumer.run({
         eachMessage: async ({topic, partition, message}) => {
+            await sendMail();
+
             console.log(`[${partition}] ${message.key?.toString()}: ${message.value.toString()}`);
         },
     });
