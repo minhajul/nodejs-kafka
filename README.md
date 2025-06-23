@@ -44,10 +44,10 @@ npm run dev
 
 This will launch the Express application and expose two API routes for producing events to Kafka topics:
 
-| Endpoint                   | Description              | Kafka Topic     |
-| -------------------------- | ------------------------ | --------------- |
-| `POST /api/create-order`   | Produces an order event  | `order-topic`   |
-| `POST /api/create-payment` | Produces a payment event | `payment-topic` |
+| Endpoint                  | Description              | Kafka Topic     |
+|---------------------------| ------------------------ | --------------- |
+| `GET /api/create-order`   | Produces an order event  | `order-topic`   |
+| `GET /api/create-payment` | Produces a payment event | `payment-topic` |
 
 Each endpoint sends a structured message to its corresponding Kafka topic using KafkaJS.
 
