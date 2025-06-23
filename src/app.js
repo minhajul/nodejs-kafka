@@ -1,14 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import {sendMessage} from './producer.js';
+import eventRoutes from "./routes/eventRoutes.js";
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.urlencoded({extended: true}));
 
-app.get('/', async (req, res) => {
-    await sendMessage("test-topic", 'test-key', "Test message");
-    res.status(200).send({status: 'Message sent'});
-});
+app.get('/health', (req, res) => res.status(200).send('OK'));
+app.use('/api', eventRoutes);
 
 // Global Error Handler (Prevents Server Crash)
 app.use((err, req, res, next) => {
