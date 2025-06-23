@@ -2,11 +2,14 @@
   "name": "nodejs-kafka",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "author": "",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "start:consumers": "concurrently \"nodemon src/consumers/order-consumer.js\" \"nodemon src/consumers/payment-consumer.js\""
   },
   "dependencies": {
     "body-parser": "^2.2.0",
@@ -17,7 +20,8 @@
     "resend": "^4.6.0",
     "zod": "^3.25.67"
   },
-  "keywords": [],
-  "author": "",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  },
   "license": "ISC"
 }
