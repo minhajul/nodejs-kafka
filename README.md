@@ -9,20 +9,26 @@ This project demonstrates a basic Node.js application integrating with Apache Ka
 
 ## Setup and Run
 
-1.  **Clone the repository (if applicable):**
+1.  **Clone the repository:**
 
 ```bash
 git clone https://github.com/minhajul/nodejs-kafka
 cd nodejs-kafka
 ```
 
-2.  **Start Kafka and Zookeeper using Docker Compose:**
+2.  **Start Kafka, Zookeeper and Kafka UI using Docker Compose:**
 
+To spin up the required Kafka infrastructure using Docker Compose, run:
 ```bash
 docker-compose up -d
 ```
 
-This will start two containers: `zookeeper`, `kafka` and `kafka UI`.
+This command will start the following services in detached mode:
+- **Zookeeper** – coordinates and manages Kafka brokers
+- **Kafka** – the distributed event streaming platform
+- **Kafka UI** – a web-based user interface to inspect topics, messages, and consumers
+
+You can access Kafka UI at: http://localhost:8080 (or your configured port)
 
 3.  **Install Node.js dependencies:**
 
