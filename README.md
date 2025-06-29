@@ -24,9 +24,9 @@ docker-compose up -d
 ```
 
 This command will start the following services in detached mode:
-- **Zookeeper** – coordinates and manages Kafka brokers
-- **Kafka** – the distributed event streaming platform
-- **Kafka UI** – a web-based user interface to inspect topics, messages, and consumers
+- **Zookeeper** – Coordinates and manages Kafka brokers
+- **Kafka** – The distributed event streaming platform
+- **Kafka UI** – A web-based user interface to inspect topics, messages, and consumers
 
 You can access Kafka UI at: http://localhost:8080 (or your configured port)
 

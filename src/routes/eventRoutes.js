@@ -9,7 +9,7 @@ router.get('/create-order', async (req, res) => {
 
         return res.status(200).json({
             status: 'ok',
-            data: "Message sent successfully"
+            data: "Order has been created."
         });
     } catch (error) {
         return res.status(500).json({
@@ -25,7 +25,7 @@ router.get('/create-payment', async (req, res) => {
 
         return res.status(200).json({
             status: 'ok',
-            data: "Message sent successfully"
+            data: "Payment has been created."
         });
     } catch (error) {
         return res.status(500).json({
