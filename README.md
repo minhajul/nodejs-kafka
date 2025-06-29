@@ -28,7 +28,7 @@ This command will start the following services in detached mode:
 - **Kafka** – The distributed event streaming platform
 - **Kafka UI** – A web-based user interface to inspect topics, messages, and consumers
 
-You can access Kafka UI at: http://localhost:8080 (or your configured port)
+You can access Kafka UI at: http://localhost:3000 (or your configured port)
 
 3.  **Install Node.js dependencies:**
 
